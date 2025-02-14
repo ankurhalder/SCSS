@@ -1,21 +1,9 @@
-@import "vendors/manifest";
-@import "utilities/manifest";
-@import "base/manifest";
-@import "mixins/manifest";
-@import "containers/manifest";
-@import "components/manifest";
-@import "pages/manifest";
-@import "pieces/manifest";
-html {
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
-}
-body {
-  // background-color: var(--background-color);
-  transition: all 0.5s ease-in-out;
-}
-section {
-  height: 100dvh;
-  // scroll-snap-align: start;
-  // scroll-snap-align: center;
-}
+@use "vendors/manifest";
+@use "utilities/manifest" as manifest2;
+@use "base/manifest" as manifest3;
+@use "mixins/manifest" as manifest4;
+@use "containers/manifest" as manifest5;
+@use "components/manifest" as manifest6;
+@use "pages/manifest" as manifest7;
+@use "pieces/manifest" as manifest8;
+@use "base/new-media-quries";

@@ -1,159 +1,59 @@
-// Mixin to generate media queries for both portrait and landscape orientations
 @mixin responsive($width, $height, $orientation) {
   @if $orientation == portrait {
-    // Portrait mode media query
     @media (max-width: #{$width}) and (max-height: #{$height}) {
       @content;
     }
   } @else if $orientation == landscape {
-    // Landscape mode media query
     @media (max-width: #{$height}) and (max-height: #{$width}) {
       @content;
     }
   }
 }
 
-// Example usage for each breakpoint
 @include responsive(1566px, 800px, portrait) {
-  /* Styles for 1566x800 portrait */
-  body {
-    background-color: lightblue;
-    color: black;
-  }
 }
 
-@include responsive(800px, 1566px, landscape) {
-  /* Styles for 1566x800 landscape */
-  body {
-    background-color: lightgreen;
-    color: black;
-  }
-}
-
-@include responsive(1366px, 768px, portrait) {
-  /* Styles for 1366x768 portrait */
-  body {
-    background-color: lightcoral;
-    // color: white;
-  }
-}
-
-@include responsive(768px, 1366px, landscape) {
-  /* Styles for 1366x768 landscape */
-  body {
-    background-color: rgb(190, 173, 230);
-    color: black;
-  }
+@include responsive(1566px, 800px, landscape) {
 }
 
 @include responsive(1024px, 1366px, portrait) {
-  /* Styles for 1024x1366 portrait */
-  body {
-    background-color: lightsalmon;
-    color: black;
-  }
 }
 
-@include responsive(1366px, 1024px, landscape) {
-  /* Styles for 1024x1366 landscape */
-  body {
-    background-color: lightpink;
-    color: black;
-  }
+@include responsive(1024px, 1366px, landscape) {
 }
 
 @include responsive(768px, 1024px, portrait) {
-  /* Styles for 768x1024 portrait */
-  body {
-    background-color: lightseagreen;
-    color: black;
-  }
 }
 
-@include responsive(1024px, 768px, landscape) {
-  /* Styles for 768x1024 landscape */
-  body {
-    background-color: lightsteelblue;
-    color: black;
-  }
+@include responsive(768px, 1024px, landscape) {
 }
 
 @include responsive(430px, 932px, portrait) {
-  /* Styles for 430x932 portrait */
-  body {
-    background-color: lightgrey;
-    color: black;
-  }
 }
 
-@include responsive(932px, 430px, landscape) {
-  /* Styles for 430x932 landscape */
-  body {
-    background-color: lightskyblue;
-    color: black;
-  }
+@include responsive(430px, 932px, landscape) {
 }
 
 @include responsive(414px, 896px, portrait) {
-  /* Styles for 414x896 portrait */
-  body {
-    background-color: lightgoldenrodyellow;
-    color: black;
-  }
 }
 
-@include responsive(896px, 414px, landscape) {
-  /* Styles for 414x896 landscape */
-  body {
-    background-color: lightcoral;
-    color: black;
-  }
+@include responsive(414px, 896px, landscape) {
 }
 
 @include responsive(390px, 844px, portrait) {
-  /* Styles for 390x844 portrait */
-  body {
-    background-color: lightblue;
-    color: black;
-  }
 }
 
-@include responsive(844px, 390px, landscape) {
-  /* Styles for 390x844 landscape */
-  body {
-    background-color: lightgreen;
-    color: black;
-  }
+@include responsive(390px, 844px, landscape) {
 }
 
 @include responsive(375px, 812px, portrait) {
-  /* Styles for 375x812 portrait */
-  body {
-    background-color: lightcoral;
-    color: black;
-  }
 }
 
-@include responsive(812px, 375px, landscape) {
-  /* Styles for 375x812 landscape */
-  body {
-    background-color: lightyellow;
-    color: black;
-  }
+@include responsive(375px, 812px, landscape) {
 }
 
 @include responsive(360px, 760px, portrait) {
-  /* Styles for 360x760 portrait */
-  body {
-    background-color: lightblue;
-    color: black;
-  }
 }
 
-@include responsive(760px, 360px, landscape) {
-  /* Styles for 360x760 landscape */
-  body {
-    background-color: lightgreen;
-    color: black;
-  }
+@include responsive(360px, 760px, landscape) {
 }

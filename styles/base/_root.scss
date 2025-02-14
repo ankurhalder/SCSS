@@ -1,3 +1,5 @@
+@use "new-media-quries";
+
 :root {
   html {
     scroll-behavior: smooth;
@@ -9,24 +11,72 @@
   .seo {
     display: none;
   }
-  //
   .wrapper {
-    width: 100%;
-    max-width: max(1366px, 60%);
-    min-height: 100dvh;
-    margin: 2.5% auto 2.5% auto;
-    @media (max-width: $breakpoint-desktop-wide) {
+    width: clamp(1300px, 80vw, 1500px);
+    margin: 0 auto;
+    overflow: hidden !important;
+    @include new-media-quries.responsive(1566px, 800px, portrait) {
+      width: clamp(1300px, 80vw, 1400px);
     }
-    @media (max-width: $breakpoint-desktop) {
-      max-width: max(800px, 60%);
+
+    @include new-media-quries.responsive(1566px, 800px, landscape) {
+      width: clamp(1300px, 80vw, 1500px);
     }
-    @media (max-width: $breakpoint-large-tablet) {
-      max-width: max(600px, 60%);
+
+    @include new-media-quries.responsive(1024px, 1366px, portrait) {
+      width: clamp(750px, 80vw, 900px);
     }
-    @media (max-width: $breakpoint-tablet) {
-      max-width: max(300px, 60%);
+
+    @include new-media-quries.responsive(1024px, 1366px, landscape) {
+      width: clamp(1000px, 80vw, 1300px);
     }
-    @media (max-width: $breakpoint-phone) {
+
+    @include new-media-quries.responsive(768px, 1024px, portrait) {
+      width: clamp(400px, 80vw, 600px);
+    }
+
+    @include new-media-quries.responsive(768px, 1024px, landscape) {
+      width: clamp(700px, 80vw, 850px);
+    }
+
+    @include new-media-quries.responsive(430px, 932px, portrait) {
+      width: clamp(300px, 80vw, 400px);
+    }
+
+    @include new-media-quries.responsive(430px, 932px, landscape) {
+      width: clamp(400px, 80vw, 650px);
+    }
+
+    @include new-media-quries.responsive(414px, 896px, portrait) {
+      width: clamp(380px, 80vw, 580px);
+    }
+
+    @include new-media-quries.responsive(414px, 896px, landscape) {
+      width: clamp(380px, 80vw, 600px);
+    }
+
+    @include new-media-quries.responsive(390px, 844px, portrait) {
+      width: clamp(350px, 80vw, 550px);
+    }
+
+    @include new-media-quries.responsive(390px, 844px, landscape) {
+      width: clamp(350px, 80vw, 580px);
+    }
+
+    @include new-media-quries.responsive(375px, 812px, portrait) {
+      width: clamp(340px, 80vw, 530px);
+    }
+
+    @include new-media-quries.responsive(375px, 812px, landscape) {
+      width: clamp(340px, 80vw, 560px);
+    }
+
+    @include new-media-quries.responsive(360px, 760px, portrait) {
+      width: clamp(320px, 80vw, 500px);
+    }
+
+    @include new-media-quries.responsive(360px, 760px, landscape) {
+      width: clamp(320px, 80vw, 520px);
     }
   }
 }

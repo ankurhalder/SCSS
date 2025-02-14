@@ -8,18 +8,33 @@
   content: none;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-roboto);
+  background: var(----white);
+  transition: all 0.5s ease-in-out;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 blockquote,
 q {
   quotes: none;
+  margin: 0;
+  padding: 0;
 }
 
 table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-body {
-  font-family: var(--font-roboto);
 }
 
 ul,
@@ -27,6 +42,7 @@ ol {
   list-style: none;
   margin: 0;
   padding: 0;
+  list-style-position: outside;
 }
 
 a {
@@ -43,11 +59,6 @@ input[type="submit"] {
   background: none;
   cursor: pointer;
   outline: none;
-}
-
-p {
-  margin: 0;
-  padding: 0;
 }
 
 input[type="text"],
@@ -71,15 +82,6 @@ a.button {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
 }
 
 fieldset {
@@ -108,11 +110,8 @@ caption {
   text-align: left;
 }
 
-li {
-  list-style-type: none;
-}
-
-ul,
-ol {
-  list-style-position: outside;
+.long-text,
+.pre-wrap {
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }

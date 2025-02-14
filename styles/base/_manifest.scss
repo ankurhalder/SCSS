@@ -1,8 +1,7 @@
-@import "reset";
-@import "media-queries";
-@import "new-media-quries";
-@import "root";
-@import "typography";
-@import "colors";
-@import "theme";
-@import "scroll";
+@use "reset";
+@use "media-queries";
+@use "new-media-quries";
+@use "root";
+@use "typography";
+@use "colors";
+@use "scroll";
